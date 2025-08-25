@@ -1,0 +1,112 @@
+/* =========================
+   Global Styles
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* =========================
+   Navbar (Flexbox)
+   ========================= */
+.navbar {
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #2c3e50;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ecf0f1;
+}
+
+/* =========================
+   Grid Layout for Main Content
+   ========================= */
+.grid-container {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background: #3498db;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* =========================
+   Media Queries (Responsive)
+   ========================= */
+
+/* Medium screens: tablets */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Small screens: mobile */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Vertical nav links */
+    gap: 0.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+}
